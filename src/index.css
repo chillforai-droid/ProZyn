@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#050505] text-white;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: 5px;
+    border: 2px solid #050505;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a2a2a;
+  }
+}
+
+@layer components {
+  .prose h2 {
+    @apply text-3xl font-bold mb-6 mt-12 text-white;
+  }
+  .prose h3 {
+    @apply text-2xl font-bold mb-4 mt-8 text-white/90;
+  }
+  .prose p {
+    @apply text-white/60 leading-relaxed mb-6;
+  }
+  .prose ul {
+    @apply list-disc list-inside space-y-2 mb-6 text-white/60;
+  }
+  .prose li {
+    @apply pl-2;
+  }
+}
